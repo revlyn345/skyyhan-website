@@ -21,8 +21,8 @@ const aiCrawlers = [
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/", disallow: ["/api/"] },
-      { userAgent: aiCrawlers, allow: "/", disallow: ["/api/"] },
+      { userAgent: "*", allow: "/" },
+      { userAgent: aiCrawlers, allow: "/" },
     ],
     sitemap: absoluteUrl("/sitemap.xml"),
     host: site.url,
